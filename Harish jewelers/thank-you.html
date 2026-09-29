@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thank You | Harish Jewellers</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Jost:wght@400;500&family=Rochester&display=swap" rel="stylesheet">
+
+<!-- If you added Google tag / GTM / Meta Pixel to index.html, paste the same snippet here too,
+     so a "conversion" / "generate_lead" event can also be marked complete on this page if you prefer.
+     Not required — index.html already fires the lead event at the moment of submission. -->
+
+<style>
+:root{--night:#26221F;--stone:#F5F3EF;--sand:#E7E2D9;--brass:#B39B6C;--brass-deep:#76623B;--text:#2B2622;--muted:#645C54;--soft:#CFC8BC;--serif:"Gilda Display",Georgia,serif;--sans:"Jost",system-ui,sans-serif}
+*{box-sizing:border-box;margin:0}
+body{min-height:100vh;display:flex;align-items:center;justify-content:center;font:400 1.0625rem/1.65 var(--sans);color:var(--stone);background:var(--night);padding:24px;-webkit-font-smoothing:antialiased}
+.card{max-width:520px;text-align:center}
+.brand{display:block;font:400 2rem/1 "Rochester",Georgia,serif;color:var(--brass);text-decoration:none;margin-bottom:28px}
+.tick{width:56px;height:56px;border-radius:50%;border:1.5px solid var(--brass);display:flex;align-items:center;justify-content:center;margin:0 auto 24px}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(1.6rem,5vw,2.2rem);margin-bottom:14px}
+p{color:var(--soft);margin-bottom:32px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.btn{display:inline-block;padding:13px 24px;border:1px solid var(--brass);background:var(--brass);color:var(--night);font:500 1rem var(--sans);text-decoration:none;border-radius:999px}
+.btn:hover{background:#C6B084}
+.btn.ghost{background:transparent;color:var(--stone)}
+.btn.ghost:hover{background:rgba(179,155,108,.18)}
+</style>
+</head>
+<body>
+<div class="card">
+  <a class="brand" href="index.html">Harish Jewellers</a>
+  <div class="tick" aria-hidden="true">
+    <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#B39B6C" stroke-width="2"><path d="m5 13 4 4 10-10"/></svg>
+  </div>
+  <h1>Thank you, your request is in</h1>
+  <p>We've received your details and will confirm your appointment on WhatsApp or by phone during store hours.</p>
+  <div class="cta">
+    <a class="btn" data-wa href="#">WhatsApp Us</a>
+    <a class="btn ghost" data-call href="#">Call Us</a>
+    <a class="btn ghost" href="index.html">Back to homepage</a>
+  </div>
+</div>
+<script>
+/* Keep this in sync with the CONFIG values in index.html */
+const CONFIG={phone:"+919720505024",whatsapp:"919720505024"};
+document.querySelectorAll("[data-call]").forEach(a=>a.href="tel:"+CONFIG.phone);
+document.querySelectorAll("[data-wa]").forEach(a=>a.href="https://wa.me/"+CONFIG.whatsapp+"?text="+encodeURIComponent("Hello Harish Jewellers, following up on the appointment request I just submitted."));
+</script>
+</body>
+</html>
